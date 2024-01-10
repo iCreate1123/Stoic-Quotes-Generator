@@ -1,0 +1,65 @@
+html {
+  box-sizing: border-box;
+  background-image: url(images/wp4358271-philosophers-wallpapers.jpg);
+  font-family: 'GFS Didot', serif;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+h1,
+#quoteContainer {
+  font-size: 3rem;
+  font-weight: lighter;
+}
+
+#container {
+  background-color: hsla(0, 2%, 11%, 0.454);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  width: 83%;
+  height: 80vh;
+  margin: auto;
+  margin-top: 5rem;
+  border: 0.1rem gold solid;
+}
+
+#infContainer {
+  font-size: 1.7rem;
+}
+
+button {
+  background-color: hsla(40, 49%, 51%, 0.974);
+  padding: 1.1rem 5rem;
+  border-radius: 0.7rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  animation: 3s infinite ease-in-out breathe;
+  animation-duration: 2000ms;
+  transform-origin: center;
+}
+
+@keyframes breathe {
+  from {
+    transform: scale(0.8);
+  }
+
+  75% {
+    transform: scale(1.1);
+  }
+
+  to {
+    transform: scale(0.8);
+  }
+}
