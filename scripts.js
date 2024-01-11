@@ -50,34 +50,51 @@ const informationMisonius = "Musonius Rufus was born around 20 AD in Volsinii, E
 
 const myButton = document.getElementById('myButton');
 const heading = document.querySelector('h1');
+const image = document.querySelector('img')
+image.style.display = 'none'
 
 function generateRandomNumber() {
     return Math.floor(Math.random()* (4 - 0 + 1));
 }  
+
 myButton.addEventListener('click', function() {   
+    heading.style.display = 'none'
+    image.style.display = 'block'
     let firstIndex = generateRandomNumber()
     let secondIndex = generateRandomNumber()
     const randomQuote = philosophersArray[firstIndex][secondIndex]  
-    heading.style.display = 'none'
+   
     document.getElementById("quoteContainer").innerHTML = randomQuote
 
+    
     switch(firstIndex) {
         case 0:
             document.getElementById("infoContainer").innerHTML = informationMarcus
+            image.src = 'images/1_XcUyQqLcVmEzIq54ytRMUQ.jpg'
+            image.alt = 'Marcus Aurelius'
             break;
         case 1: 
             document.getElementById("infoContainer").innerHTML = informationSeneka
+            image.src = 'images/seneca-the-younger.jpg'
+            image.alt = 'Seneca'
             break;
         case 2:
             document.getElementById("infoContainer").innerHTML = informationEpictetus
+            image.src = 'images/Epicteti_Enchiridion_Latinis_versibus_adumbratum_(Oxford_1715)_frontispiece.jpg'
+            image.alt = 'Epictetus'
             break;
         case 3: 
             document.getElementById("infoContainer").innerHTML = informationZeno
+            image.src = 'images/800wm.jpg'
+            image.alt = 'Zeno'
             break;
         case 4:
             document.getElementById("infoContainer").innerHTML = informationMisonius
+            image.src = 'images/musonius-rufus-5.jpg'
+            image.alt = 'Musonius'
             break;
-    }    
+    }          
+
 })
 
 
